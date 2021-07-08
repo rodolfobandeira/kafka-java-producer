@@ -11,9 +11,12 @@ mkdir ~/kafka
 cd ~/kafka
 wget https://www.apache.org/dyn/closer.cgi?path=/kafka/2.8.0/kafka_2.13-2.8.0.tgz
 tar -xzvf kafka_2.13-2.8.0.tgz
+cd kafka_2.12-2.8.0/
+
 
 # Start Zookeeper Server
 bin/zookeeper-server-start.sh config/zookeeper.properties
+
 
 # Starting Kafka Server
 bin/kafka-server-start.sh config/server.properties 
