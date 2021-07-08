@@ -22,3 +22,22 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 bin/kafka-server-start.sh config/server.properties 
 ```
 
+---
+
+List all Kafka topics:
+
+```bash
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+```
+
+---
+
+What is inside a specific Kafka topic?
+
+```bash
+# Consuming in realtime
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic NEW_SCORE
+
+# Listing all items from the beginning
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic NEW_SCORE --from-beginning
+```
